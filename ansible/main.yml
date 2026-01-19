@@ -3,5 +3,7 @@
 - hosts: all
   gather_facts: false
   tasks: 
-    - name: who am I
-      ansible.builtin.command: hostname
+    - name: create test directory
+      ansible.builtin.file: 
+        path: "/home/jenkins/test"
+        state: "directory"
