@@ -3,4 +3,5 @@
 - hosts: all
   gather_facts: false
   tasks: 
-    - ping:
+    - name: who am I
+      ansible.builtin.command: hostname
